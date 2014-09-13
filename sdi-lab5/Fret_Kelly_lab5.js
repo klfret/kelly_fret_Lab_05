@@ -44,10 +44,23 @@ var subtractionFunction = function(sub_one, sub_two) {
 };
 
 
+// ******* addition function *******
+var additionFunction = function(add_one, add_two) {
+	
+	var addResult;
+	
+	addResult = add_one + add_two;
+	
+	return addResult;
+	
+};
+
+
 // obtain user's numbers and operation signifier for calculation
 firstNumber = parseFloat(prompt("Enter first number.", " 6 "));
 secondNumber = parseFloat(prompt("Enter second number.", " 17 "));
-operSignifier = prompt("Enter one of the following operation signifer.", " \n\n+,  -,  *,  / ");
+operSignifier = prompt("Enter one of the following operation signifers.", " \n\n+,  -,  *,  / ");
+
 
 // if user tries to divide by zero
 if (secondNumber == 0) {
@@ -55,26 +68,35 @@ if (secondNumber == 0) {
 }
 
 
-// if operation signifier is division
+// if user enters division operation signifier
 if (operSignifier == "/") {
 	
 	calculationResult = divisionFunction(firstNumber, secondNumber);
 	
 	
-// if operation signifier is multiplication
+// if user enters multiplication operation signifier
 } else if (operSignifier == "*") {
 	
 	calculationResult = multiplicationFunction(firstNumber, secondNumber);
 
 
-// if operation signifier is subtraction	
+// if user enters subtraction operation signifier	
 } else if (operSignifier == "-") {
 	
 	calculationResult = subtractionFunction(firstNumber, secondNumber);
+	
+	
+// if user enters addition operation signifier
+} else if (operSignifier == "+") {
+	
+	calculationResult = additionFunction(firstNumber, secondNumber);
+	
 }
 
 
 console.log(firstNumber + " " + operSignifier + " " + secondNumber + " = " + calculationResult);
+
+
 
 
 
