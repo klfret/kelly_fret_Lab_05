@@ -32,10 +32,22 @@ var multiplicationFunction = function(mul_one, mul_two) {
 };
 
 
-// obtain user's numbers and operation signifier
+// ******* subtraction function *******
+var subtractionFunction = function(sub_one, sub_two) {
+	
+	var subResult;
+	
+	subResult = sub_one - sub_two;
+	
+	return subResult;
+	
+};
+
+
+// obtain user's numbers and operation signifier for calculation
 firstNumber = parseFloat(prompt("Enter first number.", " 6 "));
 secondNumber = parseFloat(prompt("Enter second number.", " 17 "));
-operSignifier = prompt("Enter operation signifer.", " + ");
+operSignifier = prompt("Enter one of the following operation signifer.", " \n\n+,  -,  *,  / ");
 
 // if user tries to divide by zero
 if (secondNumber == 0) {
@@ -53,11 +65,16 @@ if (operSignifier == "/") {
 } else if (operSignifier == "*") {
 	
 	calculationResult = multiplicationFunction(firstNumber, secondNumber);
+
+
+// if operation signifier is subtraction	
+} else if (operSignifier == "-") {
 	
+	calculationResult = subtractionFunction(firstNumber, secondNumber);
 }
 
+
 console.log(firstNumber + " " + operSignifier + " " + secondNumber + " = " + calculationResult);
-//m
 
 
 
