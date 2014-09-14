@@ -57,8 +57,8 @@ var additionFunction = function(add_one, add_two) {
 
 
 // obtain user's numbers and operation signifier for calculation
-firstNumber = parseFloat(prompt("Enter first number.", " 6 "));
-secondNumber = parseFloat(prompt("Enter second number.", " 17 "));
+firstNumber = parseFloat(prompt("Enter first number."));
+secondNumber = parseFloat(prompt("Enter second number."));
 operSignifier = prompt("Enter one of the following operation signifers.", " \n\n+,  -,  *,  / ");
 
 
@@ -95,31 +95,4 @@ if (operSignifier == "/") {
 
 
 console.log(firstNumber + " " + operSignifier + " " + secondNumber + " = " + calculationResult);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
