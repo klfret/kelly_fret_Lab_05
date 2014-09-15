@@ -64,12 +64,12 @@ operSignifier = prompt("Enter one of the following operation signifers.", " \n\n
 
 // if user tries to divide by zero
 if (secondNumber == 0) {
-	secondNumber = parseFloat(prompt("You cannot divide by zero. \n\nEnter another number."));
-}
-
-
+	
+	console.log("You cannot divide by zero.");
+		
+		
 // if user enters division operation signifier
-if (operSignifier == "/") {
+} else if (operSignifier == "/") {
 	
 	calculationResult = divisionFunction(firstNumber, secondNumber);
 	
@@ -87,7 +87,7 @@ if (operSignifier == "/") {
 	
 	
 // if user enters addition operation signifier
-} else if (operSignifier == "+") {
+} else {
 	
 	calculationResult = additionFunction(firstNumber, secondNumber);
 	
